@@ -28,3 +28,10 @@ steps:
   inputs:
     command: 'custom'
     customCommand: 'run test:e2e'
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'ssh2aws'
+    sourceFolder: '.'
+    contents: '**'
+    targetFolder: '/opt/app'
+    readyTimeout: '20000'
