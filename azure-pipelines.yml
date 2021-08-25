@@ -23,3 +23,8 @@ steps:
   inputs: 
     command: 'custom'
     customCommand: 'run test'
+- task: Npm@0
+  displayName: 'E2E Test'
+  inputs:
+    command: 'custom'
+    customCommand: 'run test:e2e'
